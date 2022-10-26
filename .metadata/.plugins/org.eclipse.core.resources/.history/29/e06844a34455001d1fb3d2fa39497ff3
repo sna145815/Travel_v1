@@ -1,0 +1,19 @@
+package service;
+
+
+
+
+
+import model.loginmodel;
+
+
+
+public class loginservice {
+
+	public int login(loginmodel model)
+	{
+		
+		return uesrdao.findbyuserid(model);
+	}
+
+}

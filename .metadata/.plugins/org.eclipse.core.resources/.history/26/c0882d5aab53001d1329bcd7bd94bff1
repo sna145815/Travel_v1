@@ -1,0 +1,18 @@
+package service;
+import model.listmodel;
+
+public class listservice
+{
+	public listmodel getlist()
+	{
+		//DB 연동해서 얻어옴 
+		
+		
+		//====================================
+	    listmodel lm= new listmodel(1,"어쩌구","sna145812",2);
+		
+		
+		
+		return lm;
+	}
+}

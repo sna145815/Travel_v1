@@ -1,0 +1,159 @@
+package DB;
+
+import java.sql.Connection;
+
+public class DBControl {
+	
+	//DB연결 정보
+	String drive = "com.mysql.cj.jdbc.Driver";
+	String url = "jdbc:mysql://127.0.0.1:3306/travel";
+	String user = "root";
+	String password = "1128";
+	
+	private WbDB db = new WbDB();
+	private loginDAO dao= new loginDAO();
+		
+	//DB연결
+	public Connection Open()
+	{
+		Connection con =  db.Open(drive, url, user, password);
+		if (con == null)
+		{
+			return null;
+		}
+		return con;
+	}
+	
+	//DB해제
+	public void Close()
+	{
+		db.Close();
+	}
+	
+	//기능
+	//회원가입
+	public int Signup(String id, String password, String name, String birth, String gender)
+	{
+		try 
+		{
+			Connection con = Open();
+			dao.Signup(id, password, name, birth, gender, con);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
+		finally
+		{
+			Close();
+		}
+	}
+
+	//로그인
+	public int Login(String id, String password)
+	{
+		try 
+		{
+			Connection con = Open();
+			dao.Login(id, password, con);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
+		finally
+		{
+			Close();
+		}
+	}
+	
+	//글 작성
+	public int Post(String title, String content, String postdate, String id)
+	{
+		try 
+		{
+			Connection con = Open();
+			dao.Post(title, content, postdate, id, con);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
+		finally
+		{
+			Close();
+		}
+	}
+	
+	//글 삭제
+	public int DeletePost(String title)
+	{
+		try 
+		{
+			Connection con = Open();
+			dao.DeletePost(title, con);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
+		finally
+		{
+			Close();
+		}
+	}
+	
+	//글 수정
+	
+	//글 검색
+	
+	//댓글 작성
+	public int Comment(int post_num, String user_id, String content, String comdate)
+	{
+		try 
+		{
+			Connection con = Open();
+			dao.Comment(post_num, user_id, content, comdate, con);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
+		finally
+		{
+			Close();
+		}
+	}
+	
+	//댓글 삭제
+	public int DeleteComment(int num)
+	{
+		try 
+		{
+			Connection con = Open();
+			dao.DeleteComment(num, con);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return 0;
+		}
+		finally
+		{
+			Close();
+		}
+	}
+	
+	//댓글 수정 
+}

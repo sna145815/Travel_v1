@@ -1,0 +1,23 @@
+package service;
+
+import model.loginmodel;
+
+public class loginservice {
+	
+	public int getlogin(loginmodel lgm)
+	{
+		//DB 연동해서 얻어옴 
+		
+		
+		//====================================
+	    
+		if(lgm.getId().equals("sna145812") && lgm.getpwd().equals("1234"))
+		{
+			return 1;
+		}
+		
+		
+		
+		return -1;
+	}
+}

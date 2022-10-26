@@ -1,0 +1,19 @@
+package service;
+
+
+
+
+import controller.dto.logindao;
+import controller.dto.logindto;
+import model.loginmodel;
+
+
+public class loginservice {
+
+	public loginmodel login(logindto dto)
+	{
+		
+		return logindao.findbyuserid(dto);
+	}
+
+}

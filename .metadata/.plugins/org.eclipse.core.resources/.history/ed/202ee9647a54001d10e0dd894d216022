@@ -1,0 +1,23 @@
+package service;
+
+import model.loginmodel;
+
+public class loginservice {
+	
+	public int getlogin(String id,String pwd)
+	{
+		//DB 연동해서 얻어옴 
+		
+		
+		//====================================
+	    
+		if(id=="aa" && pwd=="bb" )
+		{
+			return 1;
+		}
+		
+		
+		
+		return -1;
+	}
+}

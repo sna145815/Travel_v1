@@ -1,0 +1,23 @@
+package model;
+
+public class loginmodel {
+	String id;
+	String pwd;
+
+	public loginmodel() {
+		// TODO Auto-generated constructor stub
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getpwd() {
+		return pwd;
+	}
+	public void setpwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+}

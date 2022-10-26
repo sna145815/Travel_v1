@@ -1,0 +1,18 @@
+package model;
+
+import java.util.Date;
+
+public class usermodel {
+	String id;
+	String pwd;
+	String name;
+	Date date;
+	String gender;
+
+
+	public usermodel() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+}

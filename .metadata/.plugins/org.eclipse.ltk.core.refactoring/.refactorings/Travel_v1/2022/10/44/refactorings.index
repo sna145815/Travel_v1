@@ -1,0 +1,36 @@
+1666595521663	Delete element
+1666596351086	Delete element
+1666623077857	Delete elements
+1666623081233	Delete element
+1666623085168	Delete element
+1666623090803	Delete element
+1666623093593	Delete element
+1666623569961	Delete element
+1666625232520	Move 'loginpage.jsp' to 'webapp'
+1666711359177	Move 'loginpage.jsp' to 'view'
+1666711412988	Delete element
+1666711431672	Delete element
+1666711438332	Delete element
+1666713067148	Delete element
+1666713184441	Rename type 'DAO'
+1666713707055	Delete element
+1666717704546	Delete elements
+1666791708478	Delete element
+1666791794238	Copy file
+1666791802114	Delete element
+1666791808462	Rename resource 'logincontroller2.java'
+1666791813352	Copy file
+1666791817236	Delete element
+1666791820924	Rename resource 'maincontroller2.java'
+1666792455943	Move 'dto' to 'controller'
+1666792489951	Delete element
+1666792591465	Rename type 'logincontroller'
+1666792596747	Copy compilation unit
+1666792602665	Rename type 'logincontroller2'
+1666792607204	Delete element
+1666794629207	Delete element
+1666797488324	Delete element
+1666798622645	Rename package 'controller.dto'
+1666798830425	Rename compilation unit 'logindao.java'
+1666798899451	Rename compilation unit 'loginservice.java'
+1666799073047	Delete element

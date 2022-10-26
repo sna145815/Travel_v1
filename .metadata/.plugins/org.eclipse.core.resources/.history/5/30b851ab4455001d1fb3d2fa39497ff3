@@ -1,0 +1,17 @@
+package service;
+
+
+import controller.dao.userdao;
+import model.loginmodel;
+
+
+
+public class loginservice {
+
+	public int login(loginmodel model)
+	{
+		
+		return userdao.findbyuserid(model);
+	}
+
+}

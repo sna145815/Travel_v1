@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author qqw23
+ *
+ */
+module basic {
+	requires java.sql;
+}

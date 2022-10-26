@@ -1,0 +1,15 @@
+package service;
+
+
+
+
+import model.loginmodel;
+
+public class loginservice {
+
+	public int getlogin(loginmodel lgm) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

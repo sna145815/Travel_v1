@@ -1,0 +1,23 @@
+package service;
+
+
+
+public class loginservice {
+	
+	public int getlogin(String id,String pwd)
+	{
+		//DB 연동해서 얻어옴 
+		
+		
+		//====================================
+	    
+		if(id.equals("sna145812") && pwd.equals("1234"))
+		{
+			return 1;
+		}
+		
+		
+		
+		return -1;
+	}
+}

@@ -1,0 +1,12 @@
+package service;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import DB.DBControl;
+import model.loginmodel;
+
+public class loginservice {
+
+}
