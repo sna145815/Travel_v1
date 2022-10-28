@@ -12,7 +12,9 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="model.loginmodel"/>
     <fullyQualifiedTypeName name="controller.dao.userdao"/>
-    <fullyQualifiedTypeName name="service.userservice"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="user.userdao"/>
+    <fullyQualifiedTypeName name="model.userdao"/>
     <fullyQualifiedTypeName name="model.usermodel"/>
+    <fullyQualifiedTypeName name="service.userservice"/>
 </qualifiedTypeNameHistroy>

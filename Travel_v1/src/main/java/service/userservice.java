@@ -44,8 +44,7 @@ public class userservice {
             	   return 0;	//비밀번호 불일치
             } 
             return -1;	//아이디가 없음
-        }
-		catch(SQLException e)
+        }		catch(SQLException e)
 		{
 			e.printStackTrace();
 			return -2;	//오류

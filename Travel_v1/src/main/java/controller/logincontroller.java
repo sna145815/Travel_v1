@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 import model.usermodel;
 import service.userservice;
 
@@ -40,9 +39,11 @@ public class logincontroller extends HttpServlet {
 		model.setId(id);
 		model.setPwd(pwd);
 		
-		userservice userservice=new userservice();
 		
-		int result=userservice.findbyuserid(model);
+		userservice  dao=new userservice();
+		int result=dao.findbyuserid(model);
+		
+
 		
 	
 		if(result==1)

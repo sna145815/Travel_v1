@@ -1,0 +1,45 @@
+
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.io.BufferedReader;
+import java.io.IOException;
+
+public class test {
+	
+    public static void main(String[] args) throws IOException {
+    	
+    	String key = "EloQZYEza8o2Xb9BpwS9yRNo5AsAcYgSEOg86qw3D29sCXlhu43QUF6lwcf9GV%2BY5ckcR2JWgmh3FqHbICmyEA%3D%3D";    
+
+    	String result = "";
+    	
+        StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/6300000/tourDataService/tourDataListJson?serviceKey="+key+"&dcode=C0102");
+        
+       // urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "EloQZYEza8o2Xb9BpwS9yRNo5AsAcYgSEOg86qw3D29sCXlhu43QUF6lwcf9GV%2BY5ckcR2JWgmh3FqHbICmyEA%3D%3D"); /*Service Key*/
+       // urlBuilder.append("&" + URLEncoder.encode("dcode","UTF-8") + "=" + URLEncoder.encode("C0101", "UTF-8")); /*서비스분류코드표관광자원분류탭참조*/
+       // urlBuilder.append("&" + URLEncoder.encode("searchCondition","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*(1:관광자원명 , 2:소개)*/
+       // urlBuilder.append("&" + URLEncoder.encode("searchKeyword","UTF-8") + "=" + URLEncoder.encode("뿌리공원", "UTF-8")); /**/
+      //  urlBuilder.append("&" + URLEncoder.encode("pageUnit","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /**/
+        
+        URL url = new URL(urlBuilder.toString());
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.setRequestProperty("Content-type", "application/json");
+        System.out.println("Response code: " + conn.getResponseCode());
+        BufferedReader rd;
+        if(conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300) {
+            rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        } else {
+            rd = new BufferedReader(new InputStreamReader(conn.getErrorStream()));
+        }
+        StringBuilder sb = new StringBuilder();
+        String line;
+        while ((line = rd.readLine()) != null) {
+            sb.append(line);
+        }
+        rd.close();
+        conn.disconnect();
+        System.out.println(sb.toString());
+    }
+}
