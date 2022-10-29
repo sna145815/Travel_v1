@@ -32,6 +32,7 @@ INDEX VERSION 1.131+C:\Users\sna14\OneDrive\바탕 화면\1조 프로젝트\.metadata\.pl
 4167952384.index
 514467563.index
 1372415962.index
+2052619485.index
 1200207321.index
 387919398.index
 3111653716.index

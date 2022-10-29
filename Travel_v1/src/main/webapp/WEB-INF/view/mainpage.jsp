@@ -152,10 +152,10 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-          <img src="/img/daeaqua.jpg" class="img-fluid" alt="...">
+          <img src="/img/dd.jpg" class="img-fluid" alt="...">
 
             <div class="card-body">
-              <p class="card-text">아쿠아리움</p>
+              <p class="card-text">으능정이</p>
               <div class="d-flex justify-content-between align-items-center">
              
               </div>
