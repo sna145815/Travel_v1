@@ -14,20 +14,20 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">TravelPlan</a>
+  <a class="navbar-brand" href="/main">TravelPlan</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">회원가입</a>
+        <a class="nav-link" href="/join">회원가입</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/login">로그인</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">게시판</a>
+        <a class="nav-link" href="/board">게시판</a>
       </li>    
     </ul>
   </div>  

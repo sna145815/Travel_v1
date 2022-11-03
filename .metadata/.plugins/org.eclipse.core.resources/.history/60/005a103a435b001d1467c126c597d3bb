@@ -1,0 +1,51 @@
+package service;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import config.DB;
+import model.gesipanmodel;
+import model.usermodel;
+
+public class gesipanservice 
+{
+	
+	public  List<gesipanmodel> allselect( )
+	{
+		String sql = "SELECT * FROM gesipan = ?";
+		Connection conn=DB.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;  
+		List<gesipanmodel> m;
+		
+		try
+		{
+            pstmt = conn.prepareStatement(sql);
+           
+            pstmt.setString(1, model.getId());
+            
+            rs = pstmt.executeQuery();
+            if (rs.next()) 
+            {
+               if (rs.getString(1).equals(model.getPwd()))
+            	   return m;		//로그인 성공
+               else
+            	   return null;	//비밀번호 불일치
+            } 
+            return null;	//아이디가 없음
+        }		catch(SQLException e)
+		{
+			e.printStackTrace();
+			return null;	//오류
+		}
+		finally {
+			
+			DB.close(conn,pstmt,rs);
+		}
+	
+	}
+
+}

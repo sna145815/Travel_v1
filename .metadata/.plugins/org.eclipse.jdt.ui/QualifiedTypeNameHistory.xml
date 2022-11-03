@@ -12,9 +12,15 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="model.loginmodel"/>
     <fullyQualifiedTypeName name="controller.dao.userdao"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="user.userdao"/>
     <fullyQualifiedTypeName name="model.userdao"/>
     <fullyQualifiedTypeName name="model.usermodel"/>
     <fullyQualifiedTypeName name="service.userservice"/>
+    <fullyQualifiedTypeName name="service.gesipanservice"/>
+    <fullyQualifiedTypeName name="model.gesipanmodel"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="model.boardmodel"/>
+    <fullyQualifiedTypeName name="service.boardservice"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
