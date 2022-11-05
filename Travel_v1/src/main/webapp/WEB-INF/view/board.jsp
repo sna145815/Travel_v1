@@ -10,8 +10,18 @@
 </head>
 <body>
 <div class="container">
-		<div class="row">
-			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+<div class="form-group row pull-right" style="float: right;" >
+<form action="board?cmd=search" method="post">
+<div class="col-xs-8">
+			<input class="form-control" name="title" type="text" size="20">
+		</div>
+		<div class="col-xs-2" style="float: right">
+			<button class="btn btn-primary" type="submit" >검색</button>
+		</div>
+</form>
+		
+	</div>
+<table class="table" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
 						<th style="background-color: #eeeeee; text-align: center;">번호</th>
@@ -31,9 +41,11 @@
 					</c:forEach>
 				</tbody>
 			</table>
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
-		</div>
-	</div>
+		
+<div style="float: right;">
+<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+</div>
+</div>
 
 </body>
 </html>

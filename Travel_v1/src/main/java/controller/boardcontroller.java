@@ -26,8 +26,6 @@ public class boardcontroller extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		
-		
 		ArrayList<boardmodel> lists=new ArrayList<boardmodel>();
 
 		boardservice service=new boardservice();
@@ -36,12 +34,23 @@ public class boardcontroller extends HttpServlet {
 		
 		request.setAttribute("lists", lists);
 		RequestDispatcher rq = request.getRequestDispatcher("WEB-INF/view/board.jsp");
-	    rq.forward(request, response);    
+	    rq.forward(request, response);  
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String cmd=request.getParameter("cmd");
+		
+		if(cmd.equals("search")) {
+			RequestDispatcher rq = request.getRequestDispatcher("WEB-INF/view/mainpage.jsp");
+		    rq.forward(request, response);    
+		}
 	}
+	
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+	
 
 }
