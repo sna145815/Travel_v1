@@ -7,11 +7,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+
 </head>
 <body>
 <div class="container">
-		<div class="row">
-			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+<div class="form-group row pull-right" style="float: right;" >
+
+<form id="form" method="POST" action="/board?cmd=search">
+<div class="col-xs-2" style="float: right">
+	<input class="form-control" name="title" type="text" size="20">
+	<button class="btn btn-primary" type="submit" value="search">검색</button>
+</div>
+</form>
+
+		
+</div>
+<table class="table" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
 						<th style="background-color: #eeeeee; text-align: center;">번호</th>
@@ -31,9 +43,11 @@
 					</c:forEach>
 				</tbody>
 			</table>
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
-		</div>
-	</div>
+		
+<div style="float: right;">
+<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+</div>
+</div>
 
 </body>
 </html>
