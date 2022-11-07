@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.usermodel;
 import service.userservice;
@@ -27,28 +28,25 @@ public class logincontroller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rq = request.getRequestDispatcher("WEB-INF/view/loginpage.jsp");
 	    rq.forward(request, response);     
-	
 	}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id=request.getParameter("id");
 		String pwd=request.getParameter("pwd");
-	
+		
 		usermodel model=new usermodel();
 		model.setId(id);
-		model.setPwd(pwd);
+		model.setPwd(pwd);	
 		
+		HttpSession session = request.getSession();
+		session.setAttribute("id", id);
 		
-		userservice  dao=new userservice();
+		userservice dao = new userservice();
 		int result=dao.findbyuserid(model);
 		
-
-		
-	
 		if(result==1)
 		{
-			
 			RequestDispatcher rq = request.getRequestDispatcher("WEB-INF/view/mainpage.jsp");
 		    rq.forward(request, response);     
 		}

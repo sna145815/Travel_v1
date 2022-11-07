@@ -27,6 +27,9 @@
         <a class="nav-link" href="/login">로그인</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/mypage">마이페이지</a>
+      </li>  
+      <li class="nav-item">
         <a class="nav-link" href="#">게시판</a>
       </li>    
     </ul>

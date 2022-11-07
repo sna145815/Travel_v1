@@ -14,9 +14,7 @@
     <input type="password" class="form-control" placeholder="Enter password" name="pwd" id="pwd">
   </div>
   <div class="form-group form-check">
- 
      <button type="submit" class="btn btn-primary">로그인</button>
- 
   </div>
   
 </form>

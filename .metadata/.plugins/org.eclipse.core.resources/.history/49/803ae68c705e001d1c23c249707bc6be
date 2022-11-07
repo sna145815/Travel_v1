@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="/layout/header.jsp" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%boolean pwdResult= (boolean)request.getAttribute("pwdResult"); %>
+	
+	<script>
+	<%if(pwdResult){ %>
+		window.close();	//팝업 브라우저 닫아라	
+		window.opener.alert('비밀번호 변경 성공');
+	<%}else{ %>
+		alert('비밀번호 변경 실패\n비밀번호를 다시 확인해세요');
+		location.replace('/views/member/memberPasswordChangeWindow.jsp');
+	<%} %>
+	</script>
+</body>
+</html>
