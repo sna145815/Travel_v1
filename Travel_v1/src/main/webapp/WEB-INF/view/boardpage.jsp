@@ -34,9 +34,9 @@
 				</thead>
 				<tbody>
 				<c:forEach var="n" items="${lists}">
-					<tr>
-						<td>${n.listID}</td>
-						<td>${n.title}</td>
+					<tr>		
+					<td>${n.listID}</td>
+						<td><a href="/board?cmd=getdetail&listid=${n.listID}">${n.title}</a></td>
 						<td>${n.userID}</td>
 						<td>${n.date}</td>
 					</tr>
