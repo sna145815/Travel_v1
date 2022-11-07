@@ -7,20 +7,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+
 </head>
 <body>
 <div class="container">
 <div class="form-group row pull-right" style="float: right;" >
-<form action="board?cmd=search" method="post">
-<div class="col-xs-8">
-			<input class="form-control" name="title" type="text" size="20">
-		</div>
-		<div class="col-xs-2" style="float: right">
-			<button class="btn btn-primary" type="submit" >검색</button>
-		</div>
+
+<form id="form" method="POST" action="/board?cmd=search">
+<div class="col-xs-2" style="float: right">
+	<input class="form-control" name="title" type="text" size="20">
+	<button class="btn btn-primary" type="submit" value="search">검색</button>
+</div>
 </form>
+
 		
-	</div>
+</div>
 <table class="table" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>

@@ -67,7 +67,7 @@ public class boardservice
 		try
 		{
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, title);
+            pstmt.setString(1, "%"+title+"%");
             
             rs = pstmt.executeQuery();
             
