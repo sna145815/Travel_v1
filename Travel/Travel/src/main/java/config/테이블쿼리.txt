@@ -1,0 +1,29 @@
+====user 테이블==
+
+CREATE TABLE `user` (
+  `id` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `birth` date DEFAULT NULL,
+  `gender` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+insert into user values ('aaa','bbb','ccc','20021025','여자');
+
+====BOARD 테이블==
+
+CREATE TABLE BOARD(
+listID INT AUTO_INCREMENT,
+title VARCHAR(50),
+userID VARCHAR(50),
+date DATETIME,
+content VARCHAR(2048),
+PRIMARY KEY (listID)
+);
+
+insert문
+insert into board(title,userID,date,content)
+values('글제목','작성자id','작성날짜','글내용');
+
+========================
